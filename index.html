@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de NFS-e</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Nota Fiscal de Serviço (NFS-e)</h1>
+
+        <form id="nfsForm">
+            <label for="valorVenda">Valor da Venda:</label>
+            <input type="number" id="valorVenda" step="0.01" placeholder="Ex: R$1.500" required>
+
+            <label for="itensVenda">Itens Vendidos:</label>
+            <textarea id="itensVenda" rows="3" placeholder="Ex: Serviço A, Serviço B" required></textarea>
+
+            <label for="data">Data De Emissão</label>
+            <input type="date" id="data">
+
+            <label for="irpf">IRPF (%):</label>
+            <input type="number" id="irpf" placeholder="Ex: 10%">
+
+            <label for="pis">PIS (%):</label>
+            <input type="number" id="pis" placeholder="Ex: 10%">
+
+            <label for="cofins">COFINS (%):</label>
+            <input type="number" id="cofins" placeholder="Ex: 10%">
+
+            <label for="inss">INSS (%):</label>
+            <input type="number" id="inss" placeholder="Ex: 10%">
+
+            <label for="issqn">ISSQN (%):</label>
+            <input type="number" id="issqn" placeholder="Ex: 10%">
+
+            <button type="button" id="calcularBtn">Calcular NFS-e</button>
+        </form>
+
+        <!-- NFS-e -->
+        <div style="display: none;" id="nfsOutput"></div>
+
+
+        <button id="imprimirBtn" style="display:none;" >Imprimir Nota Fiscal</button>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
